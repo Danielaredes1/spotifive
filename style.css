@@ -1,1 +1,21 @@
+html, body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #272626;
+}
+
+header {
+    background-color: black;
+    height: 90px;
+    display: flex;
+}
+
+#logo {
+    width: 3.2%;
+    
+}
+
 
