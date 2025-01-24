@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Spotfive</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="cadastro">
+        <form action="">
+            <fieldset>
+                <legend>Cadastro</legend>
+                <br>
+                <div class="input-cadastro">
+                    <input type="text" name="nome" id="nome" class="input-usuario" required>
+                    <label for="nome" class="label-usuario">Nome completo</label>
+                </div>
+
+                <br>
+
+                <div class="input-cadastro">
+                    <input type="text" name="email" id="email" class="input-usuario" required>
+                    <label for="email" class="label-usuario">e-mail</label>
+                </div>
+
+                <br>
+
+                <p>Gênero:</p>
+                <input type="radio" id="fem" name="genero" value="Feminino" required>
+                <label for="fem">Feminino</label> <br>
+
+                <input type="radio" id="masc" name="genero" value="Masculino" required>
+                <label for="masc">Masculino</label> <br>
+
+                <input type="radio" id="outro" name="genero" value="outro" required>
+                <label for="outro">Prefiro não informar</label>
+
+                <br><br><br>
+
+
+                <label for="nascimento">Data de nascimento:</label>
+                <br><br>
+                <input type="date" name="data-nasc" id="nascimento" required>
+
+
+
+                <br><br>
+    
+                <input type="submit" name="submit" id="submit">
+        
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
+
+
