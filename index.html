@@ -27,11 +27,48 @@
     </header>
     <div>
         <ul class="menu">
-            <li id="playlists"><button>Nova playlists</button></li>
-            <li id="musica"><button>Nova música</button></li>
-            <li id="categoria"><button>Nova categoria</button></li>
+            <li><button class="music">Nova música</button></li>
+            <li><button class="playlist">Nova playlists</button></li>
+            <li><button class="categoria">Nova categoria</button></li>
         </ul>
     </div>
+    
+    <dialog class="music">
+        <div class="popup">
+            <h2><strong>Nova música</strong></h2>
+            <input type="text" class="music" placeholder="Título">
+            <input type="text" class="music" placeholder="Link">
+            <div class="botoes">
+                <button class="salvar">Salvar</button>
+                <button class="cancelar">Cancelar</button>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog class="playlist">
+        <div class="popup">
+            <h2><strong>Nova playlist</strong></h2>
+            <input type="text" class="playlist" placeholder="Nome">
+            <div class="botoes">
+                <button class="salvar">Salvar</button>
+                <button class="cancelar">Cancelar</button>
+            </div>
+        </div>
+    </dialog>
+    <dialog class="categoria">
+        <div class="popup">
+            <h2><strong>Nova categoria</strong></h2>
+            <input type="text" class="categoria" placeholder="Categoria">
+            <div class="colorCategoria">
+                <label for="color">Selecione uma cor:</label>
+                <input type="color" id="color">
+              </div>
+            <div class="botoes">
+                <button class="salvar">Salvar</button>
+                <button class="cancelar">Cancelar</button>
+            </div>
+        </div>
+    </dialog>
     <script src="header.js"></script>
 </body>
 </html>

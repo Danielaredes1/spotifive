@@ -61,8 +61,7 @@ p {
     to {
       transform: translateX(50%);
     }
-  }
-
+}
 
 #logotipo {
     display: flex;
@@ -128,7 +127,7 @@ p {
     background-color: rgba( 0, 0, 0, .7);
     position: absolute;
     top: 3%;
-    right: 11%;
+    right: 15%;
     border: 1px solid white;
     border-radius: 16px;
     padding: 20px;
@@ -177,6 +176,70 @@ li {
     padding: 10px 20px;
 }
 
+dialog {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0 0 1em rgba(0, 0, 0, .3);
+    width: 40%;
+    height: 50%;
+}
 
+.popup input {
+    padding: 10px;
+    border: none;
+    background-color: #444;
+    outline: none;
+    border-bottom: 1px solid #272626;
+}
 
+.popup input:focus {
+    color: #fff;
+    border-color: #444;
+    border-bottom: 1px solid purple;
+  }
+
+.popup {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.popup h2 {
+    font-size: 30px;
+}
+
+.popup button {
+    padding: 10px;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 30px;
+    position: relative;
+    right: -80%;
+}
+
+.popup .botoes {
+    display: flex;
+    gap: 20px;
+}
+  
+  label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  input[type="color"] {
+    border: none;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 5px;
+  }
 
