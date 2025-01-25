@@ -341,14 +341,13 @@ main {
     display: flex;
     justify-content:left; 
     width: 100%; 
-  }
-  .circle {
+}
+.circle {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 150px;
     height: 150px;
-    background-color: #bd9eff;
     border-radius: 50%; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
     border: none;
@@ -357,6 +356,14 @@ main {
     font-size: 20px;
     margin: 20px;
     gap: 20px;
+}
+
+#standard.circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: dimgrey;
+    text-align: center;
 }
 
 .circle:hover {
@@ -392,6 +399,7 @@ main {
     align-items: center;
     border-radius: 10px;
     margin-right: .5%;
+    margin-left: 0.5%;
   }
   
   .menu-item {
