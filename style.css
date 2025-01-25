@@ -9,6 +9,8 @@ html, body {
 
 body {
     background-color: black;
+    
+
 }
 
 header {
@@ -32,6 +34,7 @@ p {
 
 a {
     text-decoration: none;
+    color: white;
 }
 
 #logo {
@@ -325,12 +328,13 @@ main {
     height: 100%; 
     display: flex;
     border: none;
-    background: linear-gradient(deg, #272626, #1a1a1a);
+    background: linear-gradient(60deg, #272626, #1a1a1a);
     margin-left: auto;
     margin-right: auto;
     margin-top: 80px;
     border-radius: 10px;
     padding: 10px;
+    overflow-x:hidden;
   }
 
 .circle-container {
@@ -344,9 +348,10 @@ main {
     justify-content: center;
     width: 150px;
     height: 150px;
-    background-color: #3498db;
+    background-color: #bd9eff;
     border-radius: 50%; 
-    border: 2px solid #2c3e50;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    border: none;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
@@ -354,3 +359,23 @@ main {
     gap: 20px;
 }
 
+.circle:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background:none; 
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #333;
+    
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #444;
+  }
