@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Lexend+Giga:wght@100..900&display=swap');
+
 html, body {
     margin: 0;
     overflow-x: hidden;
@@ -15,6 +17,13 @@ header {
     justify-content: center;
 }
 
+p {
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
 #logo {
     width: 50px;
     height: 50px;
@@ -23,12 +32,13 @@ header {
 }
 
 #site_name {
+    font-family: "Cute Font", serif;
+    font-weight: 400;
+    font-style: normal;
     color: white;
     margin: 0;
     padding: 0;
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 15px;
+    font-size: 40px;
     position: absolute;
     left: 40%;
     transform: translateX(-10%);
@@ -52,6 +62,7 @@ header {
       transform: translateX(50%);
     }
   }
+
 
 #logotipo {
     display: flex;
@@ -113,7 +124,7 @@ header {
     padding: 0;
 }
 
-#menu {
+.menu {
     background-color: rgba( 0, 0, 0, .7);
     position: absolute;
     top: 3%;
@@ -125,6 +136,10 @@ header {
     padding-bottom: 60px;
     flex-direction: column;
     gap: 50px;
+    display: none;
+}
+
+.menu.active {
     display: flex;
 }
 
@@ -132,7 +147,7 @@ li {
     list-style: none;
 }
 
-#menu li a {
+.menu li button {
     text-decoration: none;
     color: #fff;
     background-color: #272626;
@@ -140,13 +155,28 @@ li {
     border-radius: 16px;
     padding: 10px 20px;
     font-size: 20px;
+    cursor: pointer;
   }
 
-p {
-    color: white;
-    margin: 0;
-    padding: 0;
-    font-size: 18px;
+.menu li button:hover {
+    background-color: #444;
 }
+
+#conta {
+    display: flex;
+    position: relative;
+    right: -25%;
+}
+
+#conta a {
+    color: white;
+    text-decoration: none;
+    background-color: #272626;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+
 
 
