@@ -36,3 +36,20 @@ $(document).ready(() => {
       let selectedColor = $colorInput.val();
   });
 });
+
+$(document).ready(function () {
+  const $modalOverlay = $("#modal-overlay");
+  const $closeModal = $("#close-modal");
+
+  $modalOverlay.addClass("active");
+
+  $closeModal.click(function () {
+      $modalOverlay.removeClass("active");
+  });
+
+  $modalOverlay.click(function (event) {
+      if ($(event.target).is($modalOverlay)) {
+          $modalOverlay.removeClass("active");
+      }
+  });
+});
