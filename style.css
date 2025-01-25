@@ -245,11 +245,6 @@ input[type="color"] {
     border-radius: 5px;
 }
 
-iframe {
-    position: relative;
-    bottom: -50%;
-}
-
 #conta a {
     cursor: pointer;
 }
