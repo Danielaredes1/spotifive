@@ -12,13 +12,14 @@ header {
     height: 70px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 #logo {
     width: 50px;
     height: 50px;
     margin: 1%;
-    margin-right: 8%;
+    margin-right: 8%;   
 }
 
 #site_name {
@@ -54,9 +55,92 @@ header {
 
 #logotipo {
     display: flex;
-    position: relative;
+    position: absolute;
     margin-left: 1%;
+    left: 0%;
 }
+
+#pesquisar {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    padding: 5px;
+}
+
+#search {
+    width: 180%;
+    padding: 7px 40px;
+    font-size: 16px;
+    border: 1px solid;
+    border-radius: 15px;
+    background-color: #272626;
+    outline: none;
+}
+
+#search:focus {
+    color: #fff;
+    border-color: #272626;
+  }
+
+#lupa_icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    position: absolute;
+    cursor: pointer;
+}
+
+#adicionar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    right: -6%;
+}
+
+#mais_icon {
+    width: 40px;
+    height: 40px;
+    background-color: #272626;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu {
+    background-color: rgba( 0, 0, 0, .7);
+    position: absolute;
+    top: 3%;
+    right: 11%;
+    border: 1px solid white;
+    border-radius: 16px;
+    padding: 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    flex-direction: column;
+    gap: 50px;
+    display: flex;
+}
+
+li {
+    list-style: none;
+}
+
+#menu li a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #272626;
+    border: none;
+    border-radius: 16px;
+    padding: 10px 20px;
+    font-size: 20px;
+  }
 
 p {
     color: white;
