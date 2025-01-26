@@ -1,57 +1,19 @@
 <?php
-include('config.php');
 
-if(isset($_POST['email']) || isset($_POST['senha'])) {
-    if(strlen($_POST['email']) == 0){
-        echo "Preencha este e-mail";
-    } 
-    
-    else if(strlen($_POST['senha']) == 0){
-        echo "Preencha sua senha";
-    }
+if(isset($_POST['submit'])) {
+    include('config.php');
 
-    else if(strlen($_POST['genero']) == 0){
-        echo "Selecione seu genero";
-    }
-    
-    else if(strlen($_POST['data']) == 0){
-        echo "Preencha sua data";
-    }
-    
-    else if(strlen($_POST['nome']) == 0){
-        echo "Preencha seu nome";
-    }
+    $email = $_POST['email'];
+    $senha =  $_POST['senha'];
+    $genero = $_POST['genero'];
+    $data = $_POST['data_'];
+    $nome = $_POST['nome'];
 
-    else{
-        $email = $conexao->real_escape_string($_POST['email']);
-        $senha = $conexao->real_escape_string($_POST['senha']);
-        $genero = $conexao->real_escape_string($_POST['genero']);
-        $data = $conexao->real_escape_string($_POST['data_']);
-        $nome = $conexao->real_escape_string($_POST['nome']);
+    $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,email,genero,data_,senha)
+    VALUES ('$nome', '$email', '$genero', '$data', '$senha')");
 
-        $sql_code = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha' AND genero = '$genero' AND data_ = '$data' AND nome = '$nome'";
-        $sql_query = $conexao->query($sql_code) or die("Falha na execução do código SQL: " . $conexao->error);
-
-        $quantidade = $sql_query->num_rows;
-
-        if($quantidade == 1){
-            $usuario = $sql_query->fetch_assoc();
-
-            if(!isset($_SESSION)){
-                session_start();
-            }
-
-            $_SESSION['ID'] = $usuario['ID'];
-            $_SESSION['nome'] = $usuario['nome'];
-
-            header("Location: login.php");
-
-        }
-        else{
-            echo "Falha ao cadastrar!";
-        }
-    }
 }
+
 ?>
 
 <!DOCTYPE html>
