@@ -17,7 +17,7 @@
     </div>
     <header>
         <div id="logotipo">
-            <a href="index.html"><img id="logo" src="imgs/logo.png" alt="logotipo"></a>
+            <a href="index.php"><img id="logo" src="imgs/logo.png" alt="logotipo"></a>
             <h3 id="site_name">SPOTFIVE</h3>
         </div>
         <div id="pesquisar">
@@ -28,7 +28,7 @@
             <button id="mais_icon">+</button>
         </div>
         <div id="conta">
-            <a href="login.html">Fazer login</a>
+            <a href="login.php">Fazer login</a>
         </div>
         
         <div>
