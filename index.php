@@ -31,10 +31,18 @@ include('security.php');
         <div id="adicionar">
             <button id="mais_icon">+</button>
         </div>
-        <div id="conta">
-            <a href="logout.php">Sair</a>
-        </div>
         
+        <div id="conta">
+            <button id="botao_log"> log </button>
+        </div>
+
+        <div>
+            <ul class="profile">
+                //<li><a href="profile.php" id="mydados">Meus dados</a></li>
+                <li><a href="logout.php" id="bye">Desconectar</a></li>
+            </ul>
+        </div>
+              
         <div>
             <ul class="menu">
                 <li><button class="music">Nova música</button></li>
