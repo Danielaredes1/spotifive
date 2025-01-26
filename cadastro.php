@@ -13,6 +13,7 @@ if(isset($_POST['submit'])) {
     VALUES ('$nome', '$email', '$genero', '$data', '$senha')");
 
     header("Location: login.php");
+
 }
 
 ?>
@@ -32,14 +33,14 @@ if(isset($_POST['submit'])) {
                 <legend>Cadastro</legend>
                 <br>
                 <div class="input-cadastro">
-                    <input type="text" name="nome" id="nome" class="input-usuario">
+                    <input type="text" name="nome" id="nome" class="input-usuario" required>
                     <label for="nome" class="label-usuario">Nome completo</label>
                 </div>
 
                 <br>
 
                 <div class="input-cadastro">
-                    <input type="text" name="email" id="email" class="input-usuario">
+                    <input type="text" name="email" id="email" class="input-usuario" required>
                     <label for="email" class="label-usuario">e-mail</label>
                 </div>
 
@@ -60,12 +61,12 @@ if(isset($_POST['submit'])) {
 
                 <label for="nascimento">Data de nascimento:</label>
                 <br><br>
-                <input type="date" name="data_" id="nascimento">
+                <input type="date" name="data_" id="nascimento" required>
 
                 <br><br>
                 
                 <div class="input-cadastro">
-                    <input type="password" name="senha" id="senha" class="input-usuario">
+                    <input type="password" name="senha" id="senha" class="input-usuario" required>
                     <label for="senha" class="label-usuario">Digite uma senha</label>
                 </div>
 
