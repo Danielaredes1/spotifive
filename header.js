@@ -53,3 +53,8 @@ $(document).ready(function () {
       }
   });
 });
+
+//Javascript feito por Daniela para o botão de logar 
+$('#botao_log').on("click", function(){
+    $('.profile').toggle();
+})
