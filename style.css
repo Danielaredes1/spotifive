@@ -180,8 +180,8 @@ li {
 
 #conta {
     display: flex;
-    position: relative;
-    right: -25%;
+    position: absolute;
+    right: 3%;
 }
 
 #conta a {
@@ -346,8 +346,8 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
     border: none;
@@ -391,7 +391,7 @@ main {
     left: 0;
     top: 0px;
     height: 100vh;
-    width: 80px;
+    width: 60px;
     padding: 10px;
     background: linear-gradient(70deg, #272626, #1a1a1a);
     display: flex;
@@ -411,7 +411,7 @@ main {
   }
   
   .menu-item span {
-    font-size: 16px;
+    font-size: 13px;
     color: #fff; 
     font-family: Arial, Helvetica, sans-serif;
   }
@@ -424,6 +424,11 @@ main {
   .menu-item:hover {
     background: #333; /* Cor ao passar o mouse */
     border-radius: 10px;
+  }
+
+  .sidebar img {
+    width: 30px;
+    height: 30px;
   }
 
   section {
