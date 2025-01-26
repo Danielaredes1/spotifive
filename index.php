@@ -1,3 +1,7 @@
+<?php
+include('security.php');
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -28,7 +32,7 @@
             <button id="mais_icon">+</button>
         </div>
         <div id="conta">
-            <a href="login.php">Fazer login</a>
+            <a href="logout.php">Sair</a>
         </div>
         
         <div>
