@@ -53,9 +53,9 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
     <div id="tela-login">
         <h1>Login</h1>
         <form action="" method="POST">
-            <input type="text" placeholder="nome" name="nome">
+            <input type="text" placeholder="nome" name="nome" required>
             <br><br>
-            <input type="password" placeholder="senha" name="senha">
+            <input type="password" placeholder="senha" name="senha" required>
             <br><br>
             <input type="submit" name="submit" id="submit">
         </form>
