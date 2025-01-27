@@ -3,7 +3,7 @@ include('security.php');
 ?>
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,10 +69,10 @@ include('security.php');
     <dialog class="categoria">
         <div class="popup">
             <h2><strong>Nova categoria</strong></h2>
-            <input type="text" class="categoria" placeholder="Categoria">
-            <div class="colorCategoria">
-                <label for="color">Selecione uma cor:</label>
-                <input type="color" id="color">
+            <input type="text" class="categoria" placeholder="Nome da categoria">
+            <div class="imgCategoria">
+                <label for="imgperfil">Escolha uma foto:</label>
+                <input type="text" id="imgperfil" placeholder="Link foto">
               </div>
             <div class="botoes">
                 <button class="salvar">Salvar</button>
@@ -83,52 +83,57 @@ include('security.php');
 
     <section>
         <div class="sidebar">
-            <div class="menu-item">
-                <a href="#">
+        <a href="index.php">
+                <div class="menu-item">
                     <img src="imgs/homeicon.png" alt="">
-                    <span>Inicio</span>
-                </a>
-            </div>
-            <div class="menu-item">
-                <a href="#">
+                    <span>Inicio</span> 
+                </div>
+            </a>
+            <a href="musicas.html">
+                <div class="menu-item">
                     <img src="imgs/musicicon.png" alt="">
                     <span>Músicas</span>
-                </a>
-            </div>
-            <div class="menu-item">
-                <a href="#">
+                </div>
+            </a>
+            <a href="#">
+                <div class="menu-item">
                     <img src="imgs/playlisticon.png" alt="">
                     <span>Playlists</span>
-                </a>
-            </div>
+                </div>
+            </a>
         </div>
     
         <main>
             <div class="circle-container">
-                <a href="sertanejo.php">
-                    <div id="standard" class="circle">
-                            <img src="imgs/sertanejo.jpg">
+                <a class="link_categoria" href="musicas.html#sertanejo">
+                    <div class="circle">
+                        <img src="imgs/sertanejo.jpg">
                     </div>
+                    <p>Sertanejo</p>
                 </a>
-                <a href="internacional.php">
-                    <div id="standard" class="circle">
-                    <img src="imgs/internacional.jpg">
-                    </div>
-                </a>
-                <a href="rap.php">
-                    <div id="standard" class="circle">
+                <a class="link_categoria" href="musicas.html#rap">
+                    <div class="circle">
                     <img src="imgs/rap.jpg">
                     </div>
+                    <p>RAP</p>
                 </a>
-                <a href="pagode.php">
-                    <div id="standard" class="circle">
+                <a class="link_categoria" href="musicas.html#pagode">
+                    <div class="circle">
                     <img src="imgs/pagode.jpg">
                     </div>
+                    <p>Pagode</p>
                 </a>
-                <a href="funk.php">
-                    <div id="standard" class="circle">
+                <a class="link_categoria" href="musicas.html#internacional">
+                    <div class="circle">
+                    <img src="imgs/internacional.jpg">
+                    </div>
+                    <p>Internacional</p>
+                </a>
+                <a class="link_categoria" href="musicas.html#funk">
+                    <div class="circle">
                     <img src="imgs/funk.jpg">
                     </div>
+                    <p>Funk</p>
                 </a>
         </main>
     </section>

@@ -48,7 +48,7 @@ a {
     font-family: "Cute Font", serif;
     font-weight: 400;
     font-style: normal;
-    color: white;
+    color: #9b4dca;
     margin: 0;
     padding: 0;
     font-size: 40px;
@@ -255,16 +255,6 @@ label {
     margin-bottom: 10px;
     display: block;
 }
-  
-input[type="color"] {
-    border: none;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    padding: 0;
-    border-radius: 5px;
-}
-
 #modal-overlay {
     position: fixed;
     top: 0;
@@ -343,11 +333,20 @@ main {
     align-items: center;
     flex-wrap: wrap; 
     width: 110%; 
-    gap: 20%;
+    gap: 15%;
     height: auto; 
     object-fit: cover;
     border-radius: 50%;
 }
+
+.link_categoria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
 .circle {
     display: flex;
     align-items: center;
@@ -377,13 +376,6 @@ main {
     border-radius: 50%;
 }
 
-#standard.circle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: dimgrey;
-    text-align: center;
-}
 
 .circle:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
@@ -436,12 +428,12 @@ main {
   }
   
   .menu-item.active {
-    background: #272626; /* Destaque no item ativo */
-    border-radius: 10px; /* Bordas arredondadas */
+    background: #272626; 
+    border-radius: 10px;
   }
   
   .menu-item:hover {
-    background: #333; /* Cor ao passar o mouse */
+    background: #333;
     border-radius: 10px;
   }
 
