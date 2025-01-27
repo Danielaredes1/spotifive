@@ -339,8 +339,14 @@ main {
 
 .circle-container {
     display: flex;
-    justify-content:left; 
-    width: 100%; 
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap; 
+    width: 110%; 
+    gap: 20%;
+    height: auto; 
+    object-fit: cover;
+    border-radius: 50%;
 }
 .circle {
     display: flex;
@@ -354,8 +360,21 @@ main {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    margin: 20px;
-    gap: 20px;
+    background-color: dimgray;
+    overflow: hidden;
+}
+
+.circle:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.circle img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 #standard.circle {
