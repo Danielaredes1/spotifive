@@ -31,18 +31,10 @@ include('security.php');
         <div id="adicionar">
             <button id="mais_icon">+</button>
         </div>
-        
         <div id="conta">
-            <button id="botao_log"> log </button>
+            <a href="logout.php">Sair</a>
         </div>
-
-        <div>
-            <ul class="profile">
-                //<li><a href="profile.php" id="mydados">Meus dados</a></li>
-                <li><a href="logout.php" id="bye">Desconectar</a></li>
-            </ul>
-        </div>
-              
+        
         <div>
             <ul class="menu">
                 <li><button class="music">Nova música</button></li>
@@ -113,9 +105,31 @@ include('security.php');
     
         <main>
             <div class="circle-container">
-                <a href="#"><div id="standard" class="circle">Nenhuma categoria <br> criada</div></a>
-              </div>
-              
+                <a href="sertanejo.php">
+                    <div id="standard" class="circle">
+                            <img src="imgs/sertanejo.jpg">
+                    </div>
+                </a>
+                <a href="internacional.php">
+                    <div id="standard" class="circle">
+                    <img src="imgs/internacional.jpg">
+                    </div>
+                </a>
+                <a href="rap.php">
+                    <div id="standard" class="circle">
+                    <img src="imgs/rap.jpg">
+                    </div>
+                </a>
+                <a href="pagode.php">
+                    <div id="standard" class="circle">
+                    <img src="imgs/pagode.jpg">
+                    </div>
+                </a>
+                <a href="funk.php">
+                    <div id="standard" class="circle">
+                    <img src="imgs/funk.jpg">
+                    </div>
+                </a>
         </main>
     </section>
     <script src="header.js"></script>
