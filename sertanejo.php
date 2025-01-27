@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playlist Sertanejo</title>
-    <link rel="stylesheet" href="sertanejo.css">
+    <link rel="stylesheet" href="musica.css">
 </head>
 <body>
     <header>
