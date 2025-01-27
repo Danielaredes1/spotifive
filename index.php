@@ -107,7 +107,7 @@ include('security.php');
             <div class="circle-container">
                 <a class="link_categoria" href="musicas.html#sertanejo">
                     <div class="circle">
-                        <img src="imgs/sertanejo.jpg">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRploOrwJOLiJHXyzs9SbqgrAaHkHRlY7RVw&s">
                     </div>
                     <p>Sertanejo</p>
                 </a>
@@ -135,9 +135,10 @@ include('security.php');
                     </div>
                     <p>Funk</p>
                 </a>
+            </div>
         </main>
     </section>
     <script src="header.js"></script>
-    <script src="menu.js"></script>
+    <script src="musica.js"></script>
 </body>
 </html>

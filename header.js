@@ -30,11 +30,6 @@ $(document).ready(() => {
   $('button.cancelar').click(function () {
       $(this).closest('dialog')[0].close();
   });
-
-  let $colorInput = $("#color");
-  $colorInput.on("input", () => {
-      let selectedColor = $colorInput.val();
-  });
 });
 
 $(document).ready(function () {
