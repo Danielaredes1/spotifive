@@ -447,3 +447,15 @@ main {
     flex-direction: row;
     margin-top: 80px;
   }
+
+.delete-category {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+  
+}

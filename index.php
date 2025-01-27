@@ -106,34 +106,39 @@ include('security.php');
         <main>
             <div class="circle-container">
                 <a class="link_categoria" href="musicas.html#sertanejo">
+                    <p>Sertanejo</p>
                     <div class="circle">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRploOrwJOLiJHXyzs9SbqgrAaHkHRlY7RVw&s">
                     </div>
-                    <p>Sertanejo</p>
+                    <button class="delete-category">Excluir</button>
                 </a>
                 <a class="link_categoria" href="musicas.html#rap">
+                    <p>RAP</p>
                     <div class="circle">
                     <img src="imgs/rap.jpg">
                     </div>
-                    <p>RAP</p>
+                    <button class="delete-category">Excluir</button>
                 </a>
                 <a class="link_categoria" href="musicas.html#pagode">
+                    <p>Pagode</p>
                     <div class="circle">
                     <img src="imgs/pagode.jpg">
                     </div>
-                    <p>Pagode</p>
+                    <button class="delete-category">Excluir</button>
                 </a>
                 <a class="link_categoria" href="musicas.html#internacional">
+                    <p>Internacional</p>
                     <div class="circle">
                     <img src="imgs/internacional.jpg">
                     </div>
-                    <p>Internacional</p>
+                    <button class="delete-category">Excluir</button>
                 </a>
                 <a class="link_categoria" href="musicas.html#funk">
+                    <p>Funk</p>
                     <div class="circle">
                     <img src="imgs/funk.jpg">
                     </div>
-                    <p>Funk</p>
+                    <button class="delete-category">Excluir</button>
                 </a>
             </div>
         </main>
