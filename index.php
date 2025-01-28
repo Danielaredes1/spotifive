@@ -26,7 +26,7 @@ include('security.php');
         </div>
         <div id="pesquisar">
             <img src="imgs/iconlupa.png" id="lupa_icon" alt="">
-            <input type="text" id="search" placeholder="Digite para pesquisar...">
+            <input type="search" id="search" placeholder="Digite para pesquisar...">
         </div>
         <div id="adicionar">
             <button id="mais_icon">+</button>
@@ -47,10 +47,18 @@ include('security.php');
     <dialog class="music">
         <div class="popup">
             <h2><strong>Nova música</strong></h2>
-            <input type="text" class="music" placeholder="Título">
-            <input type="text" class="music" placeholder="Link">
+            <input id="nomemusic" type="text" class="music nome" placeholder="Título">
+            <input id="urlmusic" type="text" class="music url" placeholder="Link">
+            <label for="esccatec">Escolha uma categoria:</label>
+            <select id="tiposCategorias" name="esccatec">
+                <option value="sertanejo">Sertanejo</option>
+                <option value="rap">RAP</option>
+                <option value="pagode">Pagode</option>
+                <option value="internacional">Internacional</option>
+                <option value="funk">Funk</option>
+            </select>
             <div class="botoes">
-                <button class="salvar">Salvar</button>
+                <button class="salvar music">Salvar</button>
                 <button class="cancelar">Cancelar</button>
             </div>
         </div>
@@ -75,7 +83,7 @@ include('security.php');
                 <input type="text" id="imgperfil" placeholder="Link foto">
               </div>
             <div class="botoes">
-                <button class="salvar">Salvar</button>
+                <button class="salvar categoria">Salvar</button>
                 <button class="cancelar">Cancelar</button>
             </div>
         </div>
@@ -110,35 +118,30 @@ include('security.php');
                     <div class="circle">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRploOrwJOLiJHXyzs9SbqgrAaHkHRlY7RVw&s">
                     </div>
-                    <button class="delete-category">Excluir</button>
                 </a>
                 <a class="link_categoria" href="musicas.html#rap">
                     <p>RAP</p>
                     <div class="circle">
                     <img src="imgs/rap.jpg">
                     </div>
-                    <button class="delete-category">Excluir</button>
                 </a>
                 <a class="link_categoria" href="musicas.html#pagode">
                     <p>Pagode</p>
                     <div class="circle">
                     <img src="imgs/pagode.jpg">
                     </div>
-                    <button class="delete-category">Excluir</button>
                 </a>
                 <a class="link_categoria" href="musicas.html#internacional">
                     <p>Internacional</p>
                     <div class="circle">
                     <img src="imgs/internacional.jpg">
                     </div>
-                    <button class="delete-category">Excluir</button>
                 </a>
                 <a class="link_categoria" href="musicas.html#funk">
                     <p>Funk</p>
                     <div class="circle">
                     <img src="imgs/funk.jpg">
                     </div>
-                    <button class="delete-category">Excluir</button>
                 </a>
             </div>
         </main>
