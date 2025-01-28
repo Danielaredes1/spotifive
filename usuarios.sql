@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 26/01/2025 às 17:06
+-- Tempo de geração: 28/01/2025 às 02:48
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -20,6 +20,19 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `formulario`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `categorias`
+--
+
+CREATE TABLE `categorias` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(255) NOT NULL,
+  `imagem_url` varchar(255) NOT NULL,
+  `usuario_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -42,11 +55,18 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`ID`, `nome`, `email`, `genero`, `data_`, `senha`) VALUES
 (1, 'teste', 'teste@gmail.com', 'feminino', '2008-10-13', '1234'),
-(3, 'Daniela Souza Costa', 'erdaque01@gmail.com', 'feminino', '2011-12-11', 'teste');
+(3, 'Daniela Souza Costa', 'erdaque01@gmail.com', 'feminino', '2011-12-11', 'teste'),
+(16, 'Davi', 'dadaviramos12@gmail.com', 'masculino', '2025-01-16', 'estado3');
 
 --
 -- Índices para tabelas despejadas
 --
+
+--
+-- Índices de tabela `categorias`
+--
+ALTER TABLE `categorias`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Índices de tabela `usuarios`
@@ -59,10 +79,16 @@ ALTER TABLE `usuarios`
 --
 
 --
+-- AUTO_INCREMENT de tabela `categorias`
+--
+ALTER TABLE `categorias`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
