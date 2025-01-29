@@ -134,6 +134,9 @@ include('security.php');
                     <p>Davi é um dos desenvolvedores principais do projeto Spotfive. Ele contribuiu para a construção do backend e da interface.
                         </p>
                     </div>
+                <div class="creditos-item">
+                        <h2>Samuel</h2>
+                        <img src="imgs/samuel.jpg" alt="Samuel" class="autor-imagem">
                 <a class="link_categoria" href="musicas.html#sertanejo">
                     <p>Sertanejo</p>
                     <div class="circle">
