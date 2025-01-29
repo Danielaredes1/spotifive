@@ -137,6 +137,11 @@ include('security.php');
                 <div class="creditos-item">
                         <h2>Samuel</h2>
                         <img src="imgs/samuel.jpg" alt="Samuel" class="autor-imagem">
+                     <p>Samuel foi responsável pelo desenvolvimento das playlists e pela estruturação do banco de dados.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
                 <a class="link_categoria" href="musicas.html#sertanejo">
                     <p>Sertanejo</p>
                     <div class="circle">
