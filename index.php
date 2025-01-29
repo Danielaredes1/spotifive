@@ -122,6 +122,11 @@ include('security.php');
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRploOrwJOLiJHXyzs9SbqgrAaHkHRlY7RVw&s">
                     </div>
                 </a>
+                </div>
+    
+        <main>
+            <section id="creditos_section">
+                <div class="creditos-container">
                 <a class="link_categoria" href="musicas.html#rap">
                     <p>RAP</p>
                     <div class="circle">
