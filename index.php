@@ -116,6 +116,8 @@ include('security.php');
     
         <main>
             <div class="circle-container">
+                <h1>Créditos</h1>
+                    <p>Aqui estão os créditos para os autores do site:</p>
                 <a class="link_categoria" href="musicas.html#sertanejo">
                     <p>Sertanejo</p>
                     <div class="circle">
