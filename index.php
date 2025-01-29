@@ -128,6 +128,9 @@ include('security.php');
                       <img src="imgs/daniella.jpg" alt="Daniella" class="autor-imagem">
                         <p>Daniella trabalhou na criação da identidade visual do Spotfive e no design das páginas.</p>
                     </div>
+                <div class="creditos-item">
+                        <h2>Davi</h2>
+                        <img src="imgs/davi.jpg" alt="Davi" class="autor-imagem">
                 <a class="link_categoria" href="musicas.html#sertanejo">
                     <p>Sertanejo</p>
                     <div class="circle">
