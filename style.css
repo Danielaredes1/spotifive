@@ -10,7 +10,6 @@ html, body {
 body {
     background-color: black;
     
-
 }
 
 header {
@@ -321,7 +320,6 @@ main {
     background: linear-gradient(60deg, #272626, #1a1a1a);
     margin-left: auto;
     margin-right: auto;
-    
     border-radius: 10px;
     padding: 10px;
     overflow-x:hidden;

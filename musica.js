@@ -119,6 +119,22 @@ $(document).ready(function() {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const hash = window.location.hash;
+
+    if (hash) {
+        const observer = new MutationObserver(() => {
+            const targetSection = document.querySelector(hash);
+            if (targetSection) {
+                observer.disconnect(); // Para de observar
+                targetSection.scrollIntoView({ behavior: "smooth" });
+            }
+        });
+
+        // Observa mudanças na estrutura da página até encontrar a seção
+        observer.observe(document.body, { childList: true, subtree: true });
+    }
+});
 $(document).on('click', '.delete-category', function() {
     const $categoryElement = $(this).closest('.link_categoria');
     const categoriaId = $categoryElement.attr('id');

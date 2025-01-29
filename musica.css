@@ -72,7 +72,7 @@ audio {
 }
 
 .music-item {
-    text-decoration: none;
+    text-decoration: none; 
     color: #fff;
     font-size: 20px;
     padding: 15px;
@@ -126,3 +126,20 @@ footer p {
 iframe {
     height: 152px;
 }
+
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background:none; 
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #333;
+    
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #444;
+  }
