@@ -162,7 +162,6 @@ $(document).on('click', '.delete-category', function() {
 //Musica
 
 $('.music.salvar').click(() => {
-    alert('Funciona!');
     let $musicEl = $('input#urlmusic').val(); 
     let $music = $('input#nomemusic').val();
     let $musicCategoria = $('select#tiposCategorias').val(); 
@@ -185,7 +184,8 @@ $('.music.salvar').click(() => {
         if (data.sucesso) {
             let newIframe = $(`
                 <li>
-                    ${data.urlmusic}
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/${data.urlmusic}?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" name="${data.nomemusic}"></iframe>
+                    
                 </li>
             `);
 
@@ -211,7 +211,7 @@ $(document).ready(function() {
             musicas.forEach(music => {
                 let newIframe = $(`
                     <li>
-                        ${music.music_url}
+                         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/${music.music_url}?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" name="${music.nome}"></iframe>
                     </li>
                 `);
 

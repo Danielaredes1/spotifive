@@ -26,7 +26,7 @@ include('security.php');
         </div>
         <div id="pesquisar">
             <img src="imgs/iconlupa.png" id="lupa_icon" alt="">
-            <input type="search" id="search" placeholder="Digite para pesquisar...">
+            <input type="text" id="search" placeholder="Digite para pesquisar...">
         </div>
         <div id="adicionar">
             <button id="mais_icon">+</button>
@@ -148,5 +148,6 @@ include('security.php');
     </section>
     <script src="header.js"></script>
     <script src="musica.js"></script>
+    <script src="pesquisa.js"></script>
 </body>
 </html>
