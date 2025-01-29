@@ -1,0 +1,15 @@
+.creditos-container {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.creditos-item {
+    margin-bottom: 30px;
+}
+
+.creditos-item h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+
