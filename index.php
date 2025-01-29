@@ -123,6 +123,8 @@ include('security.php');
                         <img src="imgs/caio.jpg" alt="Caio" class="autor-imagem">
                         <p>Caio ajudou com a integração do frontend e com o desenvolvimento de novas funcionalidades para o site. </p>
                     </div>
+                 <div class="creditos-item">
+                        <h2>Daniella</h2>
                 <a class="link_categoria" href="musicas.html#sertanejo">
                     <p>Sertanejo</p>
                     <div class="circle">
