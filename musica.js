@@ -159,51 +159,58 @@ $(document).on('click', '.delete-category', function() {
 });
 
 
-//Musica
+$(document).ready(function() {
 
-$('.music.salvar').click(() => {
-    let $musicEl = $('input#urlmusic').val(); 
-    let $music = $('input#nomemusic').val();
-    let $musicCategoria = $('select#tiposCategorias').val(); 
+    function performSearch() {
+        let searchTerm = getQueryParam('search');
 
-    if (!$musicEl || !$music || !$musicCategoria) {
-        alert('Por favor, preencha todos os campos!');
-        return;
+        if (searchTerm) {
+            searchTerm = searchTerm.trim().toLowerCase();
+            let found = false;
+
+            $('.novamusica li').each(function() {
+                let iframe = $(this).find('iframe');
+
+                if (iframe.length > 0) {
+                    let musicName = iframe.attr('name') ? iframe.attr('name').toLowerCase() : '';
+
+                    if (musicName.includes(searchTerm)) {
+                        $('html, body').animate({
+                            scrollTop: $(this).offset().top - 100  
+                        }, 500);
+                        found = true;
+                        return false; 
+                    }
+                }
+            });
+
+            if (!found) {
+                console.log("Música não encontrada.");
+            }
+        }
     }
 
-    fetch("adicionar_musica.php", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
-        },
-        body: `urlmusic=${encodeURIComponent($musicEl)}&nomemusic=${encodeURIComponent($music)}&tiposCategorias=${encodeURIComponent($musicCategoria)}`
-    })
-    .then(response => response.json()) 
-    .then(data => {
-        console.log("Resposta do PHP:", data);
-        if (data.sucesso) {
-            let newIframe = $(`
-                <li>
-                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/${data.urlmusic}?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" name="${data.nomemusic}"></iframe>
-                    
-                </li>
-            `);
+    function getQueryParam(param) {
+        let urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
 
-            $(`#${$musicCategoria} .novamusica`).append(newIframe);
-
-            $('input#urlmusic').val('');
-            $('input#nomemusic').val('');
-            $('select#tiposCategorias').val('');
-        } else {
-            alert(data.mensagem || "Ocorreu um erro!");
+    $('#search').on('keypress', function(e) {
+        if (e.which === 13) {
+            let searchTerm = $(this).val().trim();
+            if (searchTerm) {
+                window.location.href = "musicas.html?search=" + encodeURIComponent(searchTerm);
+            }
         }
-    })
-    .catch(error => {
-        console.error("Erro ao enviar dados:", error);
     });
-});
 
-$(document).ready(function() {
+    $('#lupa_icon').on('click', function() {
+        let searchTerm = $('#search').val().trim();
+        if (searchTerm) {
+            window.location.href = "musicas.html?search=" + encodeURIComponent(searchTerm);
+        }
+    });
+
     $.get("carregar_musica.php", function(musicas) {
         console.log("Resposta recebida:", musicas);
 
@@ -217,6 +224,8 @@ $(document).ready(function() {
 
                 $(`#${music.categoria_nome} .novamusica`).append(newIframe);
             });
+
+            performSearch();
         } else {
             console.log("Nenhuma música encontrada.");
         }
@@ -224,7 +233,54 @@ $(document).ready(function() {
     .fail(function() {
         console.error("Erro ao carregar músicas.");
     });
+
+    $('.music.salvar').click(() => {
+        let $musicEl = $('input#urlmusic').val(); 
+        let $music = $('input#nomemusic').val();
+        let $musicCategoria = $('select#tiposCategorias').val(); 
+
+        if (!$musicEl || !$music || !$musicCategoria) {
+            alert('Por favor, preencha todos os campos!');
+            return;
+        }
+
+        fetch("adicionar_musica.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: `urlmusic=${encodeURIComponent($musicEl)}&nomemusic=${encodeURIComponent($music)}&tiposCategorias=${encodeURIComponent($musicCategoria)}`
+        })
+        .then(response => response.json()) 
+        .then(data => {
+            console.log("Resposta do PHP:", data);
+            if (data.sucesso) {
+                let newIframe = $(`
+                    <li>
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/${data.urlmusic}?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" name="${data.nomemusic}"></iframe>
+                    </li>
+                `);
+
+                $(`#${$musicCategoria} .novamusica`).append(newIframe);
+
+                performSearch();
+
+                $('input#urlmusic').val('');
+                $('input#nomemusic').val('');
+                $('select#tiposCategorias').val('');
+            } else {
+                alert(data.mensagem || "Ocorreu um erro!");
+            }
+        })
+        .catch(error => {
+            console.error("Erro ao enviar dados:", error);
+        });
+    });
 });
+
+
+
+
 
 
 

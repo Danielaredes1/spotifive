@@ -148,6 +148,5 @@ include('security.php');
     </section>
     <script src="header.js"></script>
     <script src="musica.js"></script>
-    <script src="pesquisa.js"></script>
 </body>
 </html>
