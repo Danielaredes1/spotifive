@@ -163,12 +163,12 @@ $(document).on('click', '.delete-category', function() {
 
 $('.music.salvar').click(() => {
     alert('Funciona!');
-    let $musicEl = $('input#urlmusic').val();
+    let $musicEl = $('input#urlmusic').val(); 
     let $music = $('input#nomemusic').val();
-    let $musicCategoria = $('select#tiposCategorias').val();
+    let $musicCategoria = $('select#tiposCategorias').val(); 
 
     if (!$musicEl || !$music || !$musicCategoria) {
-        alert('Per favor, preencha todos os campos!');
+        alert('Por favor, preencha todos os campos!');
         return;
     }
 
@@ -183,26 +183,17 @@ $('.music.salvar').click(() => {
     .then(data => {
         console.log("Resposta do PHP:", data);
         if (data.sucesso) {
-            $musicEl = data.urlmusic;
-            $music = data.nomemusic;
-            $musicCategoria = data.tiposCategorias;
-    
-            console.log("Valores atualizados:");
-            console.log("Url: ", $musicEl);
-            console.log("Música: ", $music);
-            console.log("Tipo de Categoria: ", $musicCategoria);
-
             let newIframe = $(`
                 <li>
-                    ${$music}
+                    ${data.urlmusic}
                 </li>
             `);
 
-            $(`#${$musicCategoria}.novamusica`).append(newIframe);
+            $(`#${$musicCategoria} .novamusica`).append(newIframe);
 
             $('input#urlmusic').val('');
             $('input#nomemusic').val('');
-            $('input#tiposCategorias').val('');
+            $('select#tiposCategorias').val('');
         } else {
             alert(data.mensagem || "Ocorreu um erro!");
         }
@@ -217,14 +208,14 @@ $(document).ready(function() {
         console.log("Resposta recebida:", musicas);
 
         if (Array.isArray(musicas) && musicas.length > 0) {
-            let $musicCategoria = $('select#tiposCategorias').val();
-            
             musicas.forEach(music => {
-                console.log(music);
+                let newIframe = $(`
+                    <li>
+                        ${music.music_url}
+                    </li>
+                `);
 
-                let newIframe = $(music.music_url);
-
-                $(`.novamusica`).append(newIframe);
+                $(`#${music.categoria_nome} .novamusica`).append(newIframe);
             });
         } else {
             console.log("Nenhuma música encontrada.");
